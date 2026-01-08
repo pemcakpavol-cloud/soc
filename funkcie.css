@@ -1,0 +1,363 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e5e7eb;
+    color: #1f2933;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    background: linear-gradient(135deg, #2563eb, #1e3a8a);
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    background-color: #1e3a8a;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.menu a.active,
+.menu a:hover {
+    color: #ff9f1c;
+}
+
+/* Intro sekcia */
+.intro {
+    text-align: center;
+    padding: 60px 20px;
+    background: #2563eb;
+    color: white;
+}
+
+.intro h1 {
+    font-size: 36px;
+    animation: fadeSlideUp 1s ease forwards;
+}
+
+.intro p {
+    font-size: 20px;
+    margin-top: 10px;
+    animation: fadeSlideUp 1.2s ease forwards;
+}
+
+/* Funkcie sekcia */
+.features {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #f9fafb;
+}
+
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 48px;
+    color: #2563eb;
+    letter-spacing: 1.5px;
+    margin-bottom: 50px;
+    opacity: 0;
+    transform: translateY(25px);
+    animation: fadeSlideUp 1s ease forwards;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #ff9f1c;
+    margin: 12px auto 0;
+    border-radius: 2px;
+    opacity: 0;
+    transform: scaleX(0);
+    animation: lineGrow 1s 0.5s ease forwards;
+}
+
+/* GRID */
+.feature-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+/* ========================= */
+/* 🟦 BOX / CARD ANIMÁCIE */
+/* ========================= */
+
+.feature-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    width: 320px;
+    height: 420px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: 
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+/* HOVER – rovnaký efekt ako v prvom CSS */
+.feature-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+    background: #2563eb;
+}
+
+/* Text po hovere */
+.feature-card:hover h3,
+.feature-card:hover p {
+    color: white;
+}
+
+.feature-card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: #1e3a8a;
+    transition: color 0.3s ease;
+}
+
+.feature-card p {
+    font-size: 16px;
+    color: #374151;
+    transition: color 0.3s ease;
+}
+
+/* Obrazok */
+.feature-image img {
+    max-width: 600px;
+    width: 90%;
+    border-radius: 12px;
+    margin: 0 auto;
+    display: block;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.8s ease;
+}
+
+.feature-image img.animate {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Footer */
+footer {
+    background: #020617;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.footer-column h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    border-bottom: 2px solid #ff9f1c;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin: 8px 0;
+    font-size: 18px;
+    color: #e5e7eb;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #334155;
+    font-size: 16px;
+}
+
+/* Animácie */
+@keyframes fadeSlideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes lineGrow {
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+/* ===== MENU SIZE LOCK ===== */
+
+/* 1. vždy rovnaký scrollbar */
+html {
+    overflow-y: scroll;
+}
+
+/* 2. absolútne fixná výška headeru */
+header {
+    height: 100px;
+    min-height: 100px;
+    max-height: 100px;
+}
+
+/* 3. fixné vnútorné zarovnanie */
+header * {
+    box-sizing: border-box;
+}
+
+/* 4. stabilné logo */
+.logo {
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+/* 5. stabilné menu */
+.menu {
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+/* 6. stabilný text v menu */
+.menu a {
+    line-height: 1;
+    font-size: 17px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+/* ===== GLOBAL MENU LOCK ===== */
+
+html {
+    overflow-y: scroll;
+}
+
+/* header má fixnú výšku, padding sa ráta DOVNÚTRA */
+header {
+    height: 100px;
+    padding: 0 30px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+}
+
+/* logo – jedna jediná výška */
+.logo {
+    height: 60px;
+    padding: 0 25px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    font-size: 32px;
+    line-height: 1;
+}
+
+/* logo obrázok nikdy nemení layout */
+.logo-img {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+/* menu zarovnané na pevný riadok */
+.menu {
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+/* odkazy – žiadne skryté px rozdiely */
+.menu a {
+    line-height: 1;
+    font-size: 18px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+/* ===== FIX: NEPREKRÝVAJÚCE SA FEATURE BOXY ===== */
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 28px;
+
+    max-width: 1400px;
+    margin: 0 auto 60px;
+}
+
+/* kompaktné, flexibilné karty */
+.feature-card {
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+
+    padding: 22px 18px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+/* bezpečný hover – žiadne prekrývanie */
+.feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.18);
+}
+
+/* text mierne menší */
+.feature-card h3 {
+    font-size: 19px;
+}
+
+.feature-card p {
+    font-size: 14.5px;
+    line-height: 1.5;
+}

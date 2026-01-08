@@ -1,0 +1,458 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #e5e7eb;
+    color: #1f2933;
+    line-height: 1.6;
+}
+
+/* ===== ANIMÁCIE ===== */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(25px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+@keyframes zoomIn {
+    from { opacity: 0; transform: scale(0.95);}
+    to { opacity: 1; transform: scale(1);}
+}
+
+/* ===== HEADER ===== */
+header {
+    background: linear-gradient(135deg, #2563eb, #1e3a8a);
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    color: white;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 700;
+    background-color: #1e3a8a;
+    padding: 10px 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu {
+    display: flex;
+    gap: 25px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+.menu a:hover,
+.menu a.active {
+    color: #ff9f1c;
+}
+
+/* ===== INTRO ===== */
+.intro {
+    text-align: center;
+    padding: 80px 20px;
+    background: #2563eb;
+    color: white;
+    animation: fadeUp 1s ease forwards;
+}
+
+.intro h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.intro p {
+    font-size: 18px;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* ===== SEKCE – PROJECTS ===== */
+.projects {
+    padding: 70px 20px;
+    background: #f9fafb;
+}
+
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+    color: #2563eb;
+    margin-bottom: 50px;
+    text-align: center;
+    position: relative;
+    animation: fadeUp 1s ease forwards;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #ff9f1c;
+    margin: 12px auto 0;
+    border-radius: 2px;
+}
+
+/* ===== GRID ===== */
+.project-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* ===== KARTA ===== */
+.project {
+    background: #ffffff;
+    width: 380px;
+    min-height: 650px;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid #2563eb;
+    box-shadow: 0 10px 20px rgba(30, 58, 138, 0.1);
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    animation: zoomIn 1s ease forwards;
+}
+
+.project:hover {
+    transform: translateY(-10px) scale(1.03);
+    background: #2563eb;
+    border-color: #ff9f1c;
+    box-shadow: 0 15px 30px rgba(37, 99, 235, 0.3);
+}
+
+/* ===== OBRÁZKY ===== */
+.project-image {
+    width: 100%;
+    height: 400px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border: 3px solid #f1f5f9;
+    transition: border-color 0.3s ease;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project:hover .project-image img {
+    transform: scale(1.05);
+}
+
+.project:hover .project-image {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* ===== TEXT V KARTÁCH ===== */
+.project-info {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-info h3 {
+    font-size: 22px;
+    color: #1e3a8a;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.project-info p {
+    font-size: 16px;
+    color: #4b5563;
+    line-height: 1.5;
+    transition: color 0.3s ease;
+}
+
+.project:hover .project-info h3,
+.project:hover .project-info p {
+    color: #ffffff;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #020617;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    text-align: left;
+}
+
+.footer-column h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ff9f1c;
+    padding-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin: 8px 0;
+    font-size: 16px;
+    color: #e5e7eb;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #334155;
+    font-size: 16px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .project {
+        width: 90%;
+        min-height: auto;
+    }
+
+    .project-image {
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .project-image {
+        height: 300px;
+    }
+}
+/* ===== UPRAVENÝ GRID (Nahraď pôvodný .project-grid) ===== */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Automaticky pridá stĺpce podľa šírky */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ===== UPRAVENÁ KARTA (Nahraď pôvodný .project) ===== */
+.project {
+    background: #ffffff;
+    border-radius: 15px;
+    border: 2px solid #2563eb;
+    box-shadow: 0 10px 20px rgba(30, 58, 138, 0.1);
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column; /* Prvky pod sebou */
+    padding: 25px;
+    animation: zoomIn 1s ease forwards;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    background: #2563eb;
+    border-color: #ff9f1c;
+    box-shadow: 0 15px 30px rgba(37, 99, 235, 0.3);
+}
+
+/* ===== OBRÁZKY (Logá technológií) ===== */
+.project-image {
+    width: 100%;
+    height: 250px; /* Jednotná výška pre všetky obrázky */
+    background-color: #ffffff; /* Biele pozadie pre logá */
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* Padding, aby sa logá nedotýkali okrajov */
+    border: 1px solid #e5e7eb;
+}
+
+.project-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Zabezpečí, že logo bude celé a nedeformované */
+    transition: transform 0.5s ease;
+}
+
+.project:hover .project-image img {
+    transform: scale(1.1);
+}
+
+/* ===== TEXT V KARTÁCH ===== */
+.project-info {
+    text-align: center;
+    flex-grow: 1; /* Toto zabezpečí, že ak je text krátky, karta sa nevyfúkne */
+    display: flex;
+    flex-direction: column;
+}
+
+.project-info h3 {
+    font-size: 22px;
+    color: #1e3a8a;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.project-info p {
+    font-size: 15px;
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+/* Pri hoveri zmeníme farbu textu na bielu */
+.project:hover .project-info h3,
+.project:hover .project-info p {
+    color: #ffffff;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: 1fr; /* Na mobiloch jedna karta pod druhou */
+    }
+}
+/* ===== OBRÁZKY (Logá technológií) ===== */
+.project-image {
+    width: 100%;
+    height: 200px; /* menšia, jednotná výška pre všetky obrázky */
+    background-color: #ffffff; /* Biele pozadie pre logá */
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px; /* menší padding, aby bol viac miesta pre text */
+    border: 1px solid #e5e7eb;
+}
+
+.project-image img {
+    max-width: 90%; /* zmenší obrázok, aby sa vošiel do kontajnera */
+    max-height: 90%;
+    object-fit: contain; /* zabezpečí, že sa nezdeformuje */
+    transition: transform 0.5s ease;
+}
+
+.project:hover .project-image img {
+    transform: scale(1.05);
+}
+/* ===== KARTA ===== */
+.project {
+    background: #ffffff;
+    border-radius: 15px;
+    border: 2px solid #2563eb;
+    box-shadow: 0 10px 20px rgba(30, 58, 138, 0.1);
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column; /* prvky pod sebou */
+    padding: 20px;
+    animation: zoomIn 1s ease forwards;
+}
+
+/* Hover efekt */
+.project:hover {
+    transform: translateY(-10px);
+    background: #2563eb;
+    border-color: #ff9f1c;
+    box-shadow: 0 15px 30px rgba(37, 99, 235, 0.3);
+}
+
+/* ===== OBRÁZKY (Logá technológií) ===== */
+.project-image {
+    width: 100%;
+    height: 180px; /* menšia, jednotná výška */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.project-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* obrázok nebude deformovaný */
+    transition: transform 0.3s ease;
+}
+
+.project:hover .project-image img {
+    transform: scale(1.05);
+}
+
+/* ===== TEXT V KARTÁCH ===== */
+.project-info {
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-info h3 {
+    font-size: 20px;
+    color: #1e3a8a;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.project-info p {
+    font-size: 15px;
+    color: #4b5563;
+    line-height: 1.5;
+}
+
+/* Hover text */
+.project:hover .project-info h3,
+.project:hover .project-info p {
+    color: #ffffff;
+}

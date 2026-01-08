@@ -1,0 +1,441 @@
+/* --- Základné nastavenia --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e5e7eb;
+    color: #1f2933;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* --- Header --- */
+header {
+    background: linear-gradient(135deg, #2563eb, #1e3a8a);
+    padding: 25px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    background-color: #1e3a8a;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.menu a:hover,
+.menu a.active {
+    color: #ff9f1c;
+}
+
+/* --- Úvodná sekcia --- */
+.intro {
+    text-align: center;
+    padding: 80px 20px;
+    background: #2563eb;
+    color: white;
+}
+
+.intro h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.intro p {
+    font-size: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* --- Sekcie s titulkom --- */
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 48px;
+    color: #2563eb;
+    letter-spacing: 1.5px;
+    text-align: center;
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateY(25px);
+    animation: fadeSlideUp 1s ease forwards;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #ff9f1c;
+    margin: 12px auto 0;
+    border-radius: 2px;
+    opacity: 0;
+    transform: scaleX(0);
+    animation: lineGrow 1s 0.5s ease forwards;
+}
+
+/* --- Projekty / Tím --- */
+.projects {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #f9fafb;
+}
+
+.project-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.project {
+    background: #ffffff;
+    width: 300px;
+    height: 550px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.project:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+    background: #2563eb;
+}
+
+.project-image {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 3px solid #2563eb;
+    margin-bottom: 15px;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 9px;
+    display: block;
+}
+
+.project-info h3 {
+    font-size: 22px;
+    color: #1e3a8a;
+    margin-bottom: 8px;
+}
+
+.project-info p {
+    font-size: 16px;
+    color: #374151;
+}
+
+.project:hover .project-info h3,
+.project:hover .project-info p {
+    color: #ffffff;
+}
+
+/* --- Sekcia "Prístup/Approach" --- */
+.approach {
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.approach h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #ff9f1c;
+}
+
+.approach p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    color: #e5e7eb;
+}
+
+.approach ul {
+    list-style: none;
+    padding: 0;
+}
+
+.approach ul li {
+    font-size: 18px;
+    margin: 10px 0;
+    padding: 10px;
+    background: #1e293b;
+    border-radius: 5px;
+    display: inline-block;
+    width: 80%;
+    color: #f9fafb;
+}
+
+/* --- Footer --- */
+footer {
+    background: #020617;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    text-align: left;
+}
+
+.footer-column h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    border-bottom: 2px solid #ff9f1c;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin: 8px 0;
+    font-size: 18px;
+    color: #e5e7eb;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #334155;
+    font-size: 16px;
+}
+
+/* --- Scroll to top --- */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #1e293b;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+    border-radius: 50%;
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.scroll-to-top:hover {
+    background-color: #ff9f1c;
+    transform: scale(1.1);
+}
+
+.scroll-to-top.show {
+    opacity: 1;
+}
+
+/* --- Animácie --- */
+@keyframes fadeSlideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes lineGrow {
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+/* --- Media Queries --- */
+@media (max-width: 1024px) {
+    .project {
+        width: 45%;
+        height: auto;
+    }
+
+    .project-image {
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project {
+        width: 80%;
+        max-width: 400px;
+        height: auto;
+    }
+
+    .project-image {
+        height: 300px;
+    }
+}
+/* --- Sekcie s obsahom na stred --- */
+.intro,
+.school,
+.motivation,
+.vision,
+.approach {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* vertikálne */
+    align-items: center;     /* horizontálne */
+    text-align: center;
+    padding: 80px 20px;
+    gap: 20px; /* medzera medzi textami */
+}
+
+.school p,
+.motivation p,
+.vision p,
+.approach p {
+    max-width: 700px;
+    line-height: 1.6;
+}
+
+.project-info h3,
+.project-info p {
+    text-align: center;
+}
+/* ===== MENU SIZE LOCK ===== */
+
+/* 1. vždy rovnaký scrollbar */
+html {
+    overflow-y: scroll;
+}
+
+/* 2. absolútne fixná výška headeru */
+header {
+    height: 100px;
+    min-height: 100px;
+    max-height: 100px;
+}
+
+/* 3. fixné vnútorné zarovnanie */
+header * {
+    box-sizing: border-box;
+}
+
+/* 4. stabilné logo */
+.logo {
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+/* 5. stabilné menu */
+.menu {
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+/* 6. stabilný text v menu */
+.menu a {
+    line-height: 1;
+    font-size: 17px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+/* ===== GLOBAL MENU LOCK ===== */
+
+html {
+    overflow-y: scroll;
+}
+
+/* header má fixnú výšku, padding sa ráta DOVNÚTRA */
+header {
+    height: 100px;
+    padding: 0 30px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+}
+
+/* logo – jedna jediná výška */
+.logo {
+    height: 60px;
+    padding: 0 25px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    font-size: 32px;
+    line-height: 1;
+}
+
+/* logo obrázok nikdy nemení layout */
+.logo-img {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+/* menu zarovnané na pevný riadok */
+.menu {
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+/* odkazy – žiadne skryté px rozdiely */
+.menu a {
+    line-height: 1;
+    font-size: 18px;
+    font-weight: 700;
+    white-space: nowrap;
+}

@@ -1,0 +1,414 @@
+/* ===== RESET ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #e5e7eb;
+    color: #1f2933;
+}
+
+/* ===== ANIMÁCIE ===== */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== HEADER ===== */
+header {
+    background: linear-gradient(135deg, #2563eb, #1e3a8a);
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    background-color: #1e3a8a;
+    padding: 12px 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo span {
+    display: block;
+}
+
+/* ak by bolo logo obrázok */
+.logo-img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-right: 10px;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+.menu a:hover,
+.menu a.active {
+    color: #ff9f1c;
+}
+
+/* ===== INTRO ===== */
+.intro {
+    text-align: center;
+    padding: 80px 20px;
+    background: #2563eb;
+    color: white;
+}
+
+.intro h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+    animation: fadeUp 1s ease forwards;
+}
+
+.intro p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    animation: fadeUp 1.2s ease forwards;
+}
+
+/* ===== SEKCIE ===== */
+section {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+/* ===== NADPISY ===== */
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 36px;
+    color: #2563eb;
+    margin-bottom: 50px;
+    animation: fadeUp 1s ease forwards;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #ff9f1c;
+    margin: 12px auto 0;
+    border-radius: 2px;
+}
+
+/* ===== GRID ===== */
+.project-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* ===== KARTA ===== */
+.project {
+    background: white;
+    width: 300px;
+    padding: 25px 20px;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(30,58,138,0.15);
+    transition: 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    animation: fadeUp 1.2s ease forwards;
+}
+
+.project:hover {
+    transform: translateY(-8px);
+    background: #2563eb;
+}
+
+/* ===== OBRÁZKY ===== */
+.project-image {
+    width: 100%;
+    height: 160px; /* menšie a rovnaké */
+    border-radius: 12px;
+    border: 2px solid #e5e7eb;
+    background: #f9fafb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.project-image img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+/* ===== TEXT V KARTÁCH – PRESNE STRED ===== */
+.project-info {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px; /* fixná výška */
+    margin: 0 auto;
+}
+
+.project-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #1e3a8a;
+    transition: 0.3s;
+}
+
+.project-info p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #374151;
+}
+
+/* hover text */
+.project:hover .project-info h3,
+.project:hover .project-info p {
+    color: white;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #020617;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.footer-column h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    border-bottom: 2px solid #ff9f1c;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin: 8px 0;
+    font-size: 18px;
+    color: #e5e7eb;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #334155;
+    font-size: 16px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .project {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .project-info {
+        min-height: auto;
+    }
+
+    .project-image {
+        height: 140px;
+    }
+}
+/* ===== SAFE PREMIUM CARD ANIMATIONS ===== */
+
+.project {
+    position: relative;
+    overflow: hidden;
+    transition:
+        transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+        background-color 0.3s ease;
+    will-change: transform;
+}
+
+/* soft elevation */
+.project:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 28px 55px rgba(30,58,138,0.28);
+}
+
+/* jemný image zoom */
+.project-image img {
+    transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project:hover .project-image img {
+    transform: scale(1.07);
+}
+
+/* mikro pohyb textu */
+.project-info h3,
+.project-info p {
+    transition:
+        color 0.3s ease,
+        transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project:hover .project-info h3 {
+    transform: translateY(-2px);
+}
+
+.project:hover .project-info p {
+    transform: translateY(2px);
+}
+html {
+    overflow-y: scroll;
+}
+/* ===== MENU SIZE LOCK ===== */
+
+/* 1. vždy rovnaký scrollbar */
+html {
+    overflow-y: scroll;
+}
+
+/* 2. absolútne fixná výška headeru */
+header {
+    height: 100px;
+    min-height: 100px;
+    max-height: 100px;
+}
+
+/* 3. fixné vnútorné zarovnanie */
+header * {
+    box-sizing: border-box;
+}
+
+/* 4. stabilné logo */
+.logo {
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+/* 5. stabilné menu */
+.menu {
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+/* 6. stabilný text v menu */
+.menu a {
+    line-height: 1;
+    font-size: 17px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+/* ===== GLOBAL MENU LOCK ===== */
+
+html {
+    overflow-y: scroll;
+}
+
+/* header má fixnú výšku, padding sa ráta DOVNÚTRA */
+header {
+    height: 100px;
+    padding: 0 30px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+}
+
+/* logo – jedna jediná výška */
+.logo {
+    height: 60px;
+    padding: 0 25px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    font-size: 32px;
+    line-height: 1;
+}
+
+/* logo obrázok nikdy nemení layout */
+.logo-img {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+/* menu zarovnané na pevný riadok */
+.menu {
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+/* odkazy – žiadne skryté px rozdiely */
+.menu a {
+    line-height: 1;
+    font-size: 18px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+/* ===== KLIKATEĽNÉ DOWNLOAD BOXY ===== */
+
+.project-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.project {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-link:hover .project {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.2);
+    cursor: pointer;
+}

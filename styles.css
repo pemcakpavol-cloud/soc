@@ -1,0 +1,578 @@
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    background-color: #1e3a8a; /* modrá */
+    padding: 15px 25px;
+    border-radius: 10px;
+}
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e5e7eb;
+    color: #1f2933;
+}
+
+header {
+    background: linear-gradient(135deg, #2563eb, #1e3a8a);
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+    background-color: #1e3a8a;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.menu {
+    display: flex;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #ff9f1c; /* oranžová */
+}
+
+.intro {
+    text-align: center;
+    padding: 50px 20px;
+    background: #2563eb;
+    color: white;
+}
+
+.intro h1 {
+    font-size: 36px;
+}
+
+.intro p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.projects {
+    text-align: center;
+    padding: 80px 20px; /* viac priestoru, vzduch */
+    background-color: #f9fafb; /* jemný svetlý odtieň */
+    border-radius: 16px; /* jemné zaoblenie okolo sekcie */
+    box-shadow: 0 8px 24px rgba(30, 58, 138, 0.08); /* jemný tieň */
+    transition: background 0.3s ease;
+}
+
+/* jemné hover alebo pri scroll animácie pre celý blok */
+.projects:hover {
+    background-color: #ffffff;
+}
+
+.project-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    background: #2563eb;
+    color: white;
+}
+
+.project {
+    background: #ffffff;
+    width: 400px;
+    height: 750px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.project-image img {
+    width: 400px;
+    height: 700px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.project-info h3 {
+    margin-top: 15px;
+    font-size: 22px;
+    color: #1e3a8a; /* lepšia čitateľnosť */
+}
+
+.project:hover .project-info h3 {
+    color: #ffffff;
+}
+
+.project-info p {
+    font-size: 16px;
+    color: #374151;
+}
+
+.project:hover .project-info p {
+    color: #f9fafb;
+}
+
+.approach {
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.approach h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #ff9f1c;
+}
+
+.approach p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    color: #e5e7eb;
+}
+
+.approach ul {
+    list-style: none;
+    padding: 0;
+}
+
+.approach ul li {
+    font-size: 18px;
+    margin: 10px 0;
+    padding: 10px;
+    background: #1e293b;
+    border-radius: 5px;
+    display: inline-block;
+    width: 80%;
+    color: #f9fafb;
+}
+
+footer {
+    background: #020617;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    text-align: left;
+}
+
+.footer-column h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    border-bottom: 2px solid #ff9f1c;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin: 8px 0;
+    font-size: 18px;
+    color: #e5e7eb;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #334155;
+    font-size: 16px;
+}
+
+.contact {
+    text-align: center;
+    padding: 60px 20px;
+    background: #0f172a;
+    color: white;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.map-container,
+.form-wrapper {
+    flex: 1;
+    min-width: 400px;
+    max-width: 600px;
+    text-align: center;
+}
+
+.map-container h3,
+.form-wrapper h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ff9f1c;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background: #1e293b;
+    color: #f9fafb;
+}
+
+.contact-form textarea {
+    height: 120px;
+    resize: none;
+}
+
+.contact-form button {
+    background: #ff9f1c;
+    color: #1f2933;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #f97316;
+}
+
+@media (max-width: 1024px) {
+    .project {
+        width: 90%;
+        height: auto;
+    }
+
+    .project-image img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .project-image img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #1e293b;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+    border-radius: 50%;
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.scroll-to-top:hover {
+    background-color: #ff9f1c;
+    transform: scale(1.1);
+}
+
+.scroll-to-top.show {
+    opacity: 1;
+}
+/* moderný font pre LifeDocs nad tromi kartami */
+.section-title {
+    font-family: 'Montserrat', sans-serif; /* moderný, clean font */
+    font-weight: 800;
+    font-size: 48px;
+    color: #2563eb; /* modrá */
+    letter-spacing: 1.5px;
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateY(25px);
+    animation: fadeSlideUp 1s ease forwards;
+}
+
+/* jemná oranžová čiarka pod nadpisom */
+.section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #ff9f1c; /* oranžová */
+    margin: 12px auto 0;
+    border-radius: 2px;
+    opacity: 0;
+    transform: scaleX(0);
+    animation: lineGrow 1s 0.5s ease forwards;
+}
+
+/* animácie */
+@keyframes fadeSlideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes lineGrow {
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+/* ===== MENU SIZE LOCK ===== */
+
+/* 1. vždy rovnaký scrollbar */
+html {
+    overflow-y: scroll;
+}
+
+/* 2. absolútne fixná výška headeru */
+header {
+    height: 100px;
+    min-height: 100px;
+    max-height: 100px;
+}
+
+/* 3. fixné vnútorné zarovnanie */
+header * {
+    box-sizing: border-box;
+}
+
+/* 4. stabilné logo */
+.logo {
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+/* 5. stabilné menu */
+.menu {
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+/* 6. stabilný text v menu */
+.menu a {
+    line-height: 1;
+    font-size: 17px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+/* ===== GLOBAL MENU LOCK ===== */
+
+html {
+    overflow-y: scroll;
+}
+
+/* header má fixnú výšku, padding sa ráta DOVNÚTRA */
+header {
+    height: 100px;
+    padding: 0 30px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+}
+
+/* logo – jedna jediná výška */
+.logo {
+    height: 60px;
+    padding: 0 25px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    font-size: 32px;
+    line-height: 1;
+}
+
+/* logo obrázok nikdy nemení layout */
+.logo-img {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+/* menu zarovnané na pevný riadok */
+.menu {
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+/* odkazy – žiadne skryté px rozdiely */
+.menu a {
+    line-height: 1;
+    font-size: 18px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+.project {
+    background: #ffffff;
+    width: 400px;
+    /* Zmenil som height na min-height, aby sa karta prispôsobila obsahu */
+    min-height: 650px; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Zarovnanie odhora */
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%; /* Obrázok vyplní celú šírku karty */
+    height: 450px; /* Upravená výška, aby zostalo miesto na text */
+    object-fit: cover; /* Oreže obrázok tak, aby sedel do rozmerov */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+/* Upravená karta projektu */
+.project {
+    background: #ffffff;
+    width: 400px;
+    min-height: 650px; 
+    padding: 20px;
+    border-radius: 15px; /* Trochu zaoblenejšie pre moderný vzhľad */
+    
+    /* MODRÝ OKRAJ: nenápadný v základnom stave */
+    border: 2px solid #2563eb; 
+    box-shadow: 0 10px 20px rgba(30, 58, 138, 0.1);
+    
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Plynulejšia animácia */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Efekt pri prejdení myšou na celú kartu */
+.project:hover {
+    transform: translateY(-10px) scale(1.02); /* Karta sa nadvihne */
+    background: #2563eb;
+    color: white;
+    border-color: #ff9f1c; /* Pri hoveri sa okraj zmení na oranžový pre kontrast */
+    box-shadow: 0 15px 30px rgba(37, 99, 235, 0.4);
+}
+
+/* Obal pre obrázok s modrým podtónom */
+.project-image {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border: 3px solid #f1f5f9; /* Svetlý rámček priamo okolo fotky */
+    transition: border-color 0.3s ease;
+}
+
+.project-image img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+/* Animácia obrázka pri hoveri - jemný zoom */
+.project:hover .project-image {
+    border-color: rgba(255, 255, 255, 0.5); /* Biely polopriehľadný rámček na modrom pozadí */
+}
+
+.project:hover .project-image img {
+    transform: scale(1.05);
+}
+
+/* Úprava textu vnútri, aby ladil s okrajmi */
+.project-info h3 {
+    margin-top: 10px;
+    font-size: 24px;
+    color: #1e3a8a;
+    transition: color 0.3s ease;
+}
+
+.project:hover .project-info h3 {
+    color: #ffffff; /* Text zbelie, keď karta zmodrie */
+}
+
+.project-info p {
+    font-size: 16px;
+    color: #4b5563;
+    line-height: 1.5;
+    transition: color 0.3s ease;
+}
+
+.project:hover .project-info p {
+    color: #e5e7eb;
+}
